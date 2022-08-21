@@ -1,0 +1,6 @@
+app.py
+Contacts.log
+README.md
+restrictedfiles.txt
+run.py
+__pycache__
