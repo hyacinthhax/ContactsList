@@ -33,7 +33,7 @@ class App:
         root.title(tItle)
         root.geometry("400x400")
         c = gpg.Context()
-        recipient = c.get_key("YOURKEYIDHERE")
+        self.recipient = "YOURKEYIDHERE"
         # Entry
         e = Entry(root, width=40, borderwidth=3)
         e.grid(row=0, column=0, columnspan=9)
@@ -99,7 +99,7 @@ class App:
                 self.create()
 
     def encryption(self):
-        a_key = "YOURKEYIDHERE"
+        a_key = self.recipient
         with open(fn, "rb") as afile:
             text = afile.read()
             c = gpg.core.Context(armor=True)
